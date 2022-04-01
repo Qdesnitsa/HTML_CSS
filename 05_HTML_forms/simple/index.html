@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <table width="700">
+      <tr>
+        <td>
+          <p><b>Простая форма поиска с вариантами:</b></p>
+          <fieldset>
+            <legend>Строка поиска</legend>
+            <form
+              name="form1"
+              method="get"
+              action="http://sc.it-academy.by/fe/form.php"
+            >
+              <label for="search"></label>
+              <input type="text" maxlength="10" id="search" name="searchText" />
+              <input type="submit" value="Искать" /><br />
+              <label>
+                <input
+                  type="radio"
+                  name="radio_group"
+                  value="on_this_site"
+                  id="group_1"
+                  checked
+                />на сайте
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="radio_group"
+                  value="on_google"
+                  id="group_2"
+                />в google
+              </label>
+            </form>
+          </fieldset>
+        </td>
+        <td>
+          <p><b>Простая форма поиска с вариантами:</b></p>
+
+          <fieldset>
+            <legend>Строка поиска</legend>
+
+            <form
+              name="form2"
+              method="get"
+              action="http://sc.it-academy.by/fe/form.php"
+            >
+              <label for="search"></label>
+              <input
+                type="text"
+                maxlength="10"
+                id="search"
+                name="searchText"
+                placeholder="Please fill in this field"
+                required
+                autocomplete="off"
+                autofocus
+              />* <input type="submit" value="Искать" /><br />
+              <label>
+                <input
+                  type="radio"
+                  name="radio_group"
+                  value="on_this_site"
+                  id="group_1"
+                />на сайте
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="radio_group"
+                  value="on_google"
+                  id="group_2"
+                  checked
+                />в google
+              </label>
+              <br />* - required field
+            </form>
+          </fieldset>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><b>Простая форма авторизации:</b></p>
+
+          <fieldset>
+            <legend>Авторизуйтесь</legend>
+
+            <form
+              name="form3"
+              method="post"
+              action="http://sc.it-academy.by/fe/form.php"
+            >
+              <input
+                type="text"
+                maxlength="20"
+                id="login"
+                name="login"
+                required
+                autocomplete="off"
+                autofocus
+              />* <label for="login">Логин</label><br />
+              <input
+                type="password"
+                maxlength="20"
+                id="passwd"
+                name="password"
+                required
+                autocomplete="off"
+              />* <label for="passwd">Пароль</label><br />
+              <label>
+                <input type="checkbox" name="in_system" id="chbox1" />оставаться
+                в системе<br />
+              </label>
+              <input type="submit" value="Войти" />
+              <br />* - required field
+            </form>
+          </fieldset>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
