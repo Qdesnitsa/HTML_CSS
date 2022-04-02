@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Forms</title>
@@ -14,10 +14,10 @@
             <form
               name="form1"
               method="get"
-              action="http://sc.it-academy.by/fe/form.php"
+              action="http://fe.it-academy.by/TestForm.php"
             >
-              <label for="search"></label>
-              <input type="text" maxlength="10" id="search" name="searchText" />
+              <label for="search1"></label>
+              <input type="text" maxlength="10" id="search1" name="searchText" />
               <input type="submit" value="Искать" /><br />
               <label>
                 <input
@@ -48,13 +48,13 @@
             <form
               name="form2"
               method="get"
-              action="http://sc.it-academy.by/fe/form.php"
+              action="http://fe.it-academy.by/TestForm.php"
             >
-              <label for="search"></label>
+              <label for="search2"></label>
               <input
                 type="text"
                 maxlength="10"
-                id="search"
+                id="search2"
                 name="searchText"
                 placeholder="Please fill in this field"
                 required
@@ -65,20 +65,20 @@
                 <input
                   type="radio"
                   name="radio_group"
-                  value="on_this_site"
-                  id="group_1"
+                  value="this_site"
+                  id="on_this_site"
                 />на сайте
               </label>
               <label>
                 <input
                   type="radio"
                   name="radio_group"
-                  value="on_google"
-                  id="group_2"
+                  value="google"
+                  id="on_google"
                   checked
                 />в google
               </label>
-              <br />* - required field
+              <br />* - обязательное поле
             </form>
           </fieldset>
         </td>
@@ -93,7 +93,7 @@
             <form
               name="form3"
               method="post"
-              action="http://sc.it-academy.by/fe/form.php"
+              action="http://fe.it-academy.by/TestForm.php"
             >
               <input
                 type="text"
@@ -117,7 +117,93 @@
                 в системе<br />
               </label>
               <input type="submit" value="Войти" />
-              <br />* - required field
+              <br />* - обязательное поле
+            </form>
+          </fieldset>
+        </td>
+        <td>
+          <p><b>Опрос(голосование):</p></b>
+          <fieldset>
+            <legend>Как вам?</legend>
+          
+          <form name="form4" method="get" action="http://fe.it-academy.by/TestForm.php">
+            <label>
+              <input type="radio" name="rating" value="value_1" id="1" checked>ничего<br>
+            </label>
+            <label>
+              <input type="radio" name="rating" value="value_2" id="2">неплохо<br>
+            </label>
+            <label>
+              <input type="radio" name="rating" value="value_3" id="3">хорошо<br>
+            </label>
+            <label>
+              <input type="radio" name="rating" value="value_4" id="4">супер<br>
+            </label>
+            <input type="submit" value="Отправить">
+            <input type="hidden" name="date_voite" value="2022.02.04">
+          </fieldset>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><b>Отзыв:</b></p>
+          <fieldset>
+            <legend>Оставьте ваш отзыв</legend>
+            <form name="form5" method="post" action="http://fe.it-academy.by/TestForm.php">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autofocus
+              />* <label for="name">Имя</label><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                pattern="[a-zA-Z]{1}[a-zA-Z\d\u002E\u005F]+@([a-zA-Z]+\u002E){1,2}((net)|(com)|(org)|(ru)|(by))"
+                required
+              />* <label for="email">e-mail</label><br />
+              <textarea name="text_area" lang="ru">Форма отправки</textarea><br>
+              <input type="submit" value="Отправить">
+              <br />* - обязательное поле
+            </form>
+          </fieldset>
+        </td>
+        <td>
+          <p><b>Выпадающий и мульти списки:</b></p>
+          <fieldset>
+            <legend>Города РБ</legend>
+            <form name="form6" method="post" action="http://fe.it-academy.by/TestForm.php">
+              <select name="cities_Belarus">
+                <option value="Brest">Брест</option>
+                <option value="Vitebsk">Витебск</option>
+                <option value="Gomel">Гомель</option>
+                <option value="Grodno">Гродно</option>
+                <option value="Minsk" selected>Минск</option>
+                <option value="Mogilev">Могилёв</option>
+              </select>
+              <select name="cities_Belarus_2">
+                <optgroup label="Города РБ">
+                  <option value="1">Брест</option>
+                <option value="2">Витебск</option>
+                <option value="3">Гомель</option>
+                <option value="4">Гродно</option>
+                <option value="5">Минск</option>
+                <option value="6">Могилёв</option>
+                </optgroup>
+                <optgroup label="Города РФ">
+                  <option value="7">Астрахань</option>
+                <option value="2">Владивосток</option>
+                <option value="3">Екатеринбург</option>
+                <option value="4">Калининград</option>
+                <option value="5">Москва</option>
+                <option value="6">Санкт-Петербург</option>
+                <option value="0" selected>Выберите город</option>
+                </optgroup>
+              </select>
+              <input type="submit" value="Ок">
             </form>
           </fieldset>
         </td>
