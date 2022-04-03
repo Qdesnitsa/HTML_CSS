@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Application</title>
+  </head>
+  <body>
+    <h1 align="center">Заполните анкету</h1>
+    <fieldset>
+      <legend>Личные данные</legend>
+      <form
+        name="private_data"
+        method="post"
+        action="http://fe.it-academy.by/TestForm.php"
+      >
+        <label>
+          <input
+            type="text"
+            name="second_name"
+            id="second_name"
+            maxlength="25"
+            placeholder="Фамилия"
+            required
+            autofocus
+            pattern="[а-яА-Я]"
+          /> </label
+        ><br />
+        <label>
+          <input
+            type="text"
+            name="first_name"
+            id="first_name"
+            maxlength="20"
+            placeholder="Имя"
+            required
+            pattern="[а-яА-Я]"
+          /> </label
+        ><br />
+        <label>
+          <input
+            type="text"
+            name="middle_name"
+            id="middle_name"
+            maxlength="24"
+            placeholder="Отчество"
+            required
+            pattern="[а-яА-Я]"
+          /> </label
+        ><br />
+        <fieldset>
+            <legend>Паспортные данные</legend>
+                <label>
+                    <input type="text" name="passport_serial_number" id="psn" maxlength="2" placeholder="AA" required pattern="[A-Z]{2}">
+                </label><br>
+                <label>
+                    <input type="text" name="passport_number" id="pn" maxlength="7" placeholder="1234567" required pattern="[0-9]{7}">
+                </label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Дата Рождения</legend>
+            <input type="text" name="year_of_birth" id="bdy" maxlength="4" placeholder="Год" pattern="((19)|(20))[\d]{2}"><br>
+            <select name="month_of_birth" id="bdm">
+                <option value="01" selected>Январь</option>
+                <option value="02">Февраль</option>
+                <option value="03">Март</option>
+                <option value="04">Апрель</option>
+                <option value="05">Май</option>
+                <option value="06">Июнь</option>
+                <option value="07">Июль</option>
+                <option value="08">Август</option>
+                <option value="09">Сентябрь</option>
+                <option value="10">Октябрь</option>
+                <option value="11">Ноябрь</option>
+                <option value="12">Декабрь</option>
+            </select><br>
+            <input type="number" name="date_of_birth" id="bdd" min="01" max="31" step="1" placeholder="Число">
+        </fieldset>
+        <select name="country" id="country" required>
+            <option value="AUS">Австралия</option>
+            <option value="AGO">Ангола</option>
+            <option value="ARG">Аргентина</option>
+            <option value="BRB">Барбадос</option>
+            <option value="BLR" selected>Беларусь</option>
+            <option value="BEL">Бельгия</option>
+            <option value="BRA">Бразилия</option>
+        </select>
+        <label for="country"> - Национальность</label><br>
+        <label for="address">Адрес:</label><br>
+        <textarea name="address" lang="ru" id="address"></textarea><br>
+      </form>
+    </fieldset>
+    <fieldset>
+        <legend>Интересы</legend>
+        <form name="interests" method="post" action="http://fe.it-academy.by/TestForm.php">
+            
+        </form>
+    </fieldset>
+  </body>
+</html>
