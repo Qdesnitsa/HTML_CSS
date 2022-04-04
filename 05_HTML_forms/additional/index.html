@@ -23,7 +23,7 @@
             required
             autofocus
             pattern="[а-яА-Я]"
-          /> </label
+          /><small> (только кириллица, без пробелов, не более 25 символов)</small></label
         ><br />
         <label>
           <input
@@ -34,7 +34,7 @@
             placeholder="Имя"
             required
             pattern="[а-яА-Я]"
-          /> </label
+          /><small> (только кириллица, без пробелов, не более 20 символов)</small> </label
         ><br />
         <label>
           <input
@@ -45,7 +45,7 @@
             placeholder="Отчество"
             required
             pattern="[а-яА-Я]"
-          /> </label
+          /><small> (только кириллица, без пробелов, не более 24 символов)</small></label
         ><br />
         <fieldset>
             <legend>Паспортные данные</legend>
@@ -87,13 +87,73 @@
         <label for="country"> - Национальность</label><br>
         <label for="address">Адрес:</label><br>
         <textarea name="address" lang="ru" id="address"></textarea><br>
-      </form>
+     
     </fieldset>
     <fieldset>
         <legend>Интересы</legend>
-        <form name="interests" method="post" action="http://fe.it-academy.by/TestForm.php">
-            
-        </form>
+        <fieldset>
+            <legend>Хобби</legend>
+        <label>
+            <input type="checkbox" name="hobby[]" value="fishing">Рыбалка
+        </label><br>
+        <label>
+            <input type="checkbox" name="hobby[]" value="astronomy">Астрономия
+        </label><br>
+        <label>
+            <input type="checkbox" name="hobby[]" value="diving">Дайвинг
+        </label><br>
+        <label>
+            <input type="checkbox" name="hobby[]" value="stamp-collecting">Марки
+        </label><br>
+    </fieldset>
+    <fieldset>
+        <legend>Домашние животные (можно выбрать нескоько вариантов)</legend>
+        <select name="pets[]" id="pets" size="8" multiple>
+            <optgroup label="Попугаи">
+                <option name="pets[]" value="shell_parakeet">Волнистый</option>
+                <option name="pets[]" value="macaw">Ара</option>
+                <option name="pets[]" value="lovebird">Неразлучник</option>
+            </optgroup>
+            <optgroup label="Рыба">
+                <option name="pets[]" value="crucian_carp">Карась</option>
+                <option name="pets[]" value="river_perch">Окунь</option>
+                <option name="pets[]" value="common_sturgeon">Осётр</option>
+            </optgroup>
+            <optgroup label="Птицы">
+                <option name="pets[]" value="crow">Ворона</option>
+                <option name="pets[]" value="stork">Аист</option>
+                <option name="pets[]" value="tomtit">Синица</option>
+            </optgroup>
+        </select>
+    </fieldset>
+    </fieldset>
+    <fieldset>
+        <legend>Данные для входа и восстановления пароля</legend>
+        <input type="text" name="user_login" id="user_login" placeholder="Логин" maxlength="20" required pattern="[a-zA-Z]{5,}">
+        <small> (только латиница, без пробелов, от 5 до 20 символов)</small><br>
+        <input type="password" name="user_password" id="user_pswd" placeholder="Пароль" maxlength="20" required autocomplete="off" pattern="[a-zA-Z]{10,}">
+        <small> (только латиница, без пробелов, от 10 до 20 символов)</small><br>
+    </fieldset>
+    <fieldset>
+        <legend>Координаты</legend>
+        <input type="email" name="user_email" id="user_email" placeholder="введите адрес почты" 
+        pattern="[a-zA-Z]{1}[a-zA-Z\d\u002E\u005F]+@([a-zA-Z]+\u002E){1,2}((net)|(com)|(org)|(ru)|(by))"><br>
+        <input type="url" name="user_url" id="user_url" placeholder="введите адрес сайта"
+        pattern="(http://)[a-zA-Z]{1}[a-zA-Z\d\u002E\u005F]+[\u002E]{1}((net)|(com)|(org)|(ru)|(by))">
+    </fieldset>
+    <fieldset>
+        <legend>Цифры</legend>
+        <input type="number" name="numbers" id="numbers" min="-2.5" max="2.5" step="0.1"><br>
+        <input type="range" name="range" id="range" min="1" max="10">
+    </fieldset>
+    <fieldset>
+        <legend>Кнопки управления</legend>
+        <input type="submit" value="Отправить">
+        <input type="reset" value="Сбросить"><br>
+        <button type="button"><img src="images/email.jpg">
+        </button>
+    </fieldset>
+    </form>
     </fieldset>
   </body>
 </html>
