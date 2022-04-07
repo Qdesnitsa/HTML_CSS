@@ -122,7 +122,7 @@
           </fieldset>
         </td>
         <td>
-          <p><b>Опрос(голосование):</p></b>
+          <p><b>Опрос(голосование):</b></p>
           <fieldset>
             <legend>Как вам?</legend>
           
@@ -198,11 +198,11 @@
                 </optgroup>
                 <optgroup label="Города РФ">
                   <option name="cities_Belarus_2[]" value="7">Астрахань</option>
-                <option name="cities_Belarus_2[]" value="2">Владивосток</option>
-                <option name="cities_Belarus_2[]" value="3">Екатеринбург</option>
-                <option name="cities_Belarus_2[]" value="4">Калининград</option>
-                <option name="cities_Belarus_2[]" value="5">Москва</option>
-                <option name="cities_Belarus_2[]" value="6">Санкт-Петербург</option>
+                <option name="cities_Belarus_2[]" value="8">Владивосток</option>
+                <option name="cities_Belarus_2[]" value="9">Екатеринбург</option>
+                <option name="cities_Belarus_2[]" value="10">Калининград</option>
+                <option name="cities_Belarus_2[]" value="11">Москва</option>
+                <option name="cities_Belarus_2[]" value="12">Санкт-Петербург</option>
                 </optgroup>
               </select>
               <input type="submit" value="Ок">
@@ -216,10 +216,8 @@
           <fieldset>
             <legend>Upload</legend>
             <form enctype="multipart/form-data" name="form7" method="post" action="http://fe.it-academy.by/TestForm.php">
-              <label for="dnld_file">Файл:</label><br>
-              <input type="file" name="file" id="dnld_file" dir="ltr"><br>
-              <label for="years">Срок хранения (года):</label><br>
-              <input type="text" name="yearsToKeep" id="years" pattern="[0-9]+" maxlength="3">
+              <label>Файл:<input type="file" name="file" id="dnld_file" dir="ltr"></label><br>
+              <label>Срок хранения (года):<input type="text" name="yearsToKeep" id="years" pattern="[0-9]+" maxlength="3"></label>
               <input type="submit" value="Загрузить">
             </form>
           </fieldset>
@@ -231,7 +229,7 @@
             <form name="form8" method="post" action="http://fe.it-academy.by/TestForm.php">
             <input type="text" name="text_rus" id="text_rus" pattern="[а-яА-Я]+" placeholder="Только русские буквы"><br>
             <i>Телефонный номер в формате +ХХХ-ХХ-ХХХХХХХ, где Х - любое число</i><br>
-            <label><input type="text" name="phone_number" id="phone_number" pattern="^[+](375)[-]((29)|(33)|(44))[-]([\d]{7})$" 
+            <label><input type="text" name="phone_number" id="phone_number" pattern="^[+](375)[-]((29)|(33)|(44)|(25))[-]([\d]{7})$" 
               placeholder="+375-29-1234567"></label>
             <input type="submit" value="Проверить">
           </form>
