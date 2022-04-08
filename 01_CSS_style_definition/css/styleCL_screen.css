@@ -1,0 +1,28 @@
+h1 {
+  text-align: right;
+  font-size: medium;
+  line-height: 40px;
+}
+
+h2 {
+  text-decoration: underline;
+  font-size: 19px;
+}
+
+h2 ~ p {
+  margin-bottom: 20px;
+}
+
+.address {
+  font-style: italic;
+  line-height: 1px;
+}
+
+#intro {
+  text-align: right;
+}
+
+.main {
+  font-family: "Bad Script", cursive;
+  text-indent: 50px;
+}
