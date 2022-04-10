@@ -1,0 +1,27 @@
+body {
+    background-color:ghostwhite;
+}
+
+.header_navigation {
+    width: 15em;
+    background-color:lavender;
+    float: left;
+    
+}
+
+.content {
+    width: auto;
+    background-color: lightblue;
+    margin-bottom: 0.2em;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+div img {
+    float: right;
+}
+
+.footer {
+    background-color: lightpink;
+    width: 100%;
+}
