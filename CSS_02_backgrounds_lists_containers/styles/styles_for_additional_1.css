@@ -1,0 +1,91 @@
+/*Frame creation: version 1*/
+.first {
+  width: 80%;
+  padding: 2em;
+  background-color: honeydew;
+  background-image: url(../img/frame_1/b-r.gif), url(../img/frame_1/b-l.gif),
+    url(../img/frame_1/t-l.gif), url(../img/frame_1/t-r.gif),
+    url(../img/frame_1/l.gif), url(../img/frame_1/r.gif),
+    url(../img/frame_1/t.gif), url(../img/frame_1/b.gif);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat-y,
+    repeat-y, repeat-x, repeat-x;
+  background-position: bottom right, bottom left, top left, top right, left,
+    right, top, bottom;
+  margin-bottom: 50px;
+}
+
+/*Frame creation: version 2*/
+.second {
+  width: 80%;
+  padding: 3em;
+  background-color: white;
+  background: url(../img/frame_2/r-b.png) no-repeat bottom right,
+    url(../img/frame_2/l-b.png) no-repeat bottom left,
+    url(../img/frame_2/l-t.png) no-repeat top left,
+    url(../img/frame_2/r-t.png) no-repeat top right,
+    url(../img/frame_2/l.png) repeat-y left,
+    url(../img/frame_2/r.png) repeat-y right,
+    url(../img/frame_2/t.png) repeat-x top,
+    url(../img/frame_2/b.png) repeat-x bottom;
+  margin-bottom: 50px;
+}
+
+/*Frame creation: version 3*/
+.content {
+  padding-left: 3.5em;
+  padding-right: 3.5em;
+  padding-bottom: 3.5em;
+}
+
+.header {
+  padding-left: 1.7em;
+  padding-top: 1.5em;
+}
+
+div.border {
+  width: auto;
+}
+
+div.left {
+  background: url(../img/frame_3/left.png) repeat-y left;
+}
+
+div.top {
+  background: url(../img/frame_3/top.png) repeat-x top;
+}
+
+div.left-top {
+  background: url(../img/frame_3/left-top.png) no-repeat top left;
+}
+
+div.right {
+  background: url(../img/frame_3/right.png) repeat-y right;
+}
+
+div.right-top {
+  background: url(../img/frame_3/right-top.png) no-repeat top right;
+}
+
+div.bottom {
+  background: url(../img/frame_3/bottom.png) repeat-x bottom;
+}
+
+div.right-bottom {
+  background: url(../img/frame_3/right-bottom.png) no-repeat bottom right;
+}
+
+div.left-bottom {
+  background: url(../img/frame_3/left-bottom.png) no-repeat bottom left;
+}
+
+/*Frame creation: version 4*/
+.fourth {
+  margin-top: 50px;
+  border-style: solid;
+  border-width: 2em;
+  width: 80%;
+  border-image-source: url("../img/frame_3/ramka_square.jpg");
+  border-image-slice: 50;
+  border-image-repeat: stretch;
+  border-image-width: 2;
+}
