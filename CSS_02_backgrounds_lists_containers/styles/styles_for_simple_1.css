@@ -26,6 +26,7 @@ div {
   background-position: 0px -2388px;
 }
 
+/*Versoin 1*/
 .first {
   position: relative;
   top: 100px;
@@ -59,4 +60,35 @@ div {
   top: 20px;
   left: -440px;
   z-index: 6;
+}
+
+/*Version*/
+.first_v2 {
+  margin-left: 0px;
+  margin-bottom: -30px;
+  transform: rotate(-30deg);
+}
+
+.second_v2 {
+  margin-left: -110px;
+  margin-bottom: -25px;
+  transform: rotate(-15deg);
+}
+
+.third_v2 {
+  margin-left: -100px;
+  margin-bottom: -25px;
+  transform: rotate(0deg);
+}
+
+.fourth_v2 {
+  margin-left: -115px;
+  margin-bottom: -40px;
+  transform: rotate(15deg);
+}
+
+.fifth_v2 {
+  margin-left: -115px;
+  margin-bottom: -60px;
+  transform: rotate(30deg);
 }

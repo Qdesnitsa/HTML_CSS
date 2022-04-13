@@ -43,7 +43,7 @@
 }
 
 div.border {
-  width: auto;
+  width: 100%;
 }
 
 div.left {
@@ -52,6 +52,7 @@ div.left {
 
 div.top {
   background: url(../img/frame_3/top.png) repeat-x top;
+  width: 85%;
 }
 
 div.left-top {
