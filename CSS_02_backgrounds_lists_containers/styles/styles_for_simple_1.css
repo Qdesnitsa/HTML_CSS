@@ -26,7 +26,7 @@ div {
   background-position: 0px -2388px;
 }
 
-/*Versoin 1*/
+/*Versoin 1: cards one upon the other*/
 .first {
   position: relative;
   top: 100px;
@@ -62,7 +62,7 @@ div {
   z-index: 6;
 }
 
-/*Version*/
+/*Version 2: cards one upon the other + fanlike*/
 .first_v2 {
   margin-left: 0px;
   margin-bottom: -30px;

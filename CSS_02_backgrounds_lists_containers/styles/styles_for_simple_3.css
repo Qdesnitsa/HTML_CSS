@@ -2,6 +2,15 @@ body {
   background-color: ghostwhite;
 }
 
+h3 {
+  padding-top: 10px;
+  margin-top: 0.2px;
+}
+
+.clear {
+  clear: both;
+}
+
 .navigation {
   width: 15em;
   background-color: lavender;
@@ -12,8 +21,9 @@ body {
   width: auto;
   background-color: lightblue;
   margin-bottom: 0.2em;
-  overflow: hidden;
-  padding-bottom: 20px;
+  /*overflow: hidden;*/
+  padding-bottom: 10px;
+  margin-left: 15em;
 }
 
 div img {
@@ -23,4 +33,5 @@ div img {
 .footer {
   background-color: lightpink;
   width: 100%;
+  clear: both;
 }
