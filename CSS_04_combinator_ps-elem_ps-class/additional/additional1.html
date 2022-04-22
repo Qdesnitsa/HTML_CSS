@@ -7,10 +7,22 @@
       ul {
         list-style-image: url("../images/logo-list.jpg");
       }
-      li img {
+      a[href^="https"]::before {
+        content: url("../images/extref.png");
+      }
+      a[href*="doc."]::after {
+        content: url("../images/logo-doc.jpg");
+      }
+      a[href*="pdf."]::after {
+        content: url("../images/logo-pdf.png");
+      }
+      a[href*="zip."]::after {
+        content: url("../images/logo-zip.gif");
+      }
+      li a[href*="logo"]::after {
         visibility: hidden;
       }
-      li:hover img {
+      li:hover a[href*="logo"]::after {
         visibility: visible;
       }
       p {
@@ -24,66 +36,38 @@
     <div>
       <p>
         .DOC или .doc (от англ.
-        <a href="https://ru.wikipedia.org/wiki/.doc" target="_blank">
-          <img src="../images/extref.png" alt="link" title="link" />document</a
+        <a href="https://ru.wikipedia.org/wiki/.doc" target="_blank">document</a
         >) — расширение имени файла, используемое для файлов, представляющих
         текст, с разметкой или без.Расширение .DOC часто использовалось для
         обозначения простых текстовых файлов без форматирования, однако позже
         стало использоваться для двоичных форматов с разметкой.<br />
-        <a href="../images/logo-doc.jpg"
-          >Документ MS Word<img
-            src="../images/logo-doc.jpg"
-            alt="doc"
-            title="doc"
-        /></a>
+        <a href="../images/logo-doc.jpg">Документ MS Word</a>
       </p>
       <p>
         Portable Document Format (<a
           href="https://ru.wikipedia.org/wiki/Portable_Document_Format"
           target="_blank"
-        >
-          <img src="../images/extref.png" alt="title" title="link" />PDF</a
+          >PDF</a
         >) — межплатформенный формат электронных документов, разработанный
         фирмой Adobe Systems с использованием ряда возможностей языка
         PostScript.<br />
-        <a href="../images/logo-pdf.png"
-          >Документ PDF<img src="../images/logo-pdf.png" alt="pdf" title="pdf"
-        /></a>
+        <a href="../images/logo-pdf.png">Документ PDF</a>
       </p>
       <p>
         ZIP — популярный формат сжатия данных и архивации файлов. Файл в этом
         формате обычно имеет расширение
-        <a href="https://ru.wikipedia.org/wiki/ZIP" target="_blank">
-          <img src="../images/extref.png" alt="title" title="link" />.zip</a
-        >
-        и хранит в сжатом или несжатом виде один или несколько файлов, которые
+        <a href="https://ru.wikipedia.org/wiki/ZIP" target="_blank">.zip</a> и
+        хранит в сжатом или несжатом виде один или несколько файлов, которые
         можно из него извлечь путём распаковки с помощью специальной
         программы.<br />
-        <a href="../images/logo-zip.gif"
-          >Архив<img src="../images/logo-zip.gif" alt="zip" title="zip"
-        /></a>
+        <a href="../images/logo-zip.gif">Архив</a>
       </p>
     </div>
     <h3>Это список из файлов</h3>
     <ul>
-      <li>
-        <a href="../images/logo-doc.jpg"
-          >Документ MS Word<img
-            src="../images/logo-doc.jpg"
-            alt="doc"
-            title="doc"
-        /></a>
-      </li>
-      <li>
-        <a href="../images/logo-pdf.png"
-          >Документ PDF<img src="../images/logo-pdf.png" alt="pdf" title="pdf"
-        /></a>
-      </li>
-      <li>
-        <a href="../images/logo-zip.gif"
-          >Архив<img src="../images/logo-zip.gif" alt="zip" title="zip"
-        /></a>
-      </li>
+      <li><a href="../images/logo-doc.jpg">Документ MS Word</a></li>
+      <li><a href="../images/logo-pdf.png">Документ PDF</a></li>
+      <li><a href="../images/logo-zip.gif">Архив</a></li>
     </ul>
   </body>
 </html>
