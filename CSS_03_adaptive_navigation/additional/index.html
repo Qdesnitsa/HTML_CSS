@@ -18,7 +18,11 @@
         }
         div.MenuLevel2 {
           width: 100px;
-          display: none;
+          opacity: 0;
+          visibility: hidden;
+          transition-property: opacity, visibility;
+          transition-duration: 0.8s;
+          transition-delay: 0.8s;
         }
         div.MenuLevel2 > div {
           background-color: cyan;
@@ -27,12 +31,14 @@
         }
         div.MenuLevel1 > div:hover div.MenuLevel2 {
           display: block;
-          position: absolute;
+          position:absolute;
           top: 100%;
           z-index: 1;
+          opacity: 1;
+          visibility: visible;
         }
       }
-      
+
       @media all and (max-width: 620px) {
         div.MenuLevel1 {
           display: grid;
@@ -47,7 +53,11 @@
         }
         div.MenuLevel2 {
           width: 100px;
-          display: none;
+          opacity: 0;
+          visibility:hidden;
+          transition-property: opacity, visibility;
+          transition-duration: 0.8s;
+          transition-delay: 0.8s;
         }
         div.MenuLevel2 > div {
           background-color: cyan;
@@ -60,6 +70,8 @@
           left: 100%;
           top: 0.01%;
           z-index: 1;
+          opacity: 1;
+          visibility: visible;
         }
       }
     </style>
