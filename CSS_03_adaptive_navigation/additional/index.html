@@ -4,7 +4,6 @@
     <title>Menu</title>
     <meta charset="UTF-8" />
     <style>
-      @media all and (max-width: 1950px) {
         div.MenuLevel1 {
           display: inline-flex;
         }
@@ -22,7 +21,8 @@
           visibility: hidden;
           transition-property: opacity, visibility;
           transition-duration: 0.8s;
-          transition-delay: 0.8s;
+          position: absolute;
+          top: 30px;
         }
         div.MenuLevel2 > div {
           background-color: cyan;
@@ -37,7 +37,7 @@
           opacity: 1;
           visibility: visible;
         }
-      }
+    
 
       @media all and (max-width: 620px) {
         div.MenuLevel1 {
@@ -57,7 +57,9 @@
           visibility:hidden;
           transition-property: opacity, visibility;
           transition-duration: 0.8s;
-          transition-delay: 0.8s;
+          position: absolute;
+          left: 100px;
+          top: .1px;
         }
         div.MenuLevel2 > div {
           background-color: cyan;

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery</title>
+    <style>
+      .check_password {
+        background-color: white;
+      }
+      .password {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Авторизуйтесь</legend>
+
+      <form
+        name="form3"
+        method="post"
+        action="http://fe.it-academy.by/TestForm.php"
+      >
+        <input
+          type="text"
+          class="password"
+          required
+          autocomplete="off"
+          autofocus
+        />* <label for="password">Пароль</label><br />
+        <input
+          type="text"
+          class="check_password"
+          required
+          autocomplete="off"
+        />* <label for="check_password">Повторите пароль</label><br />
+        <div class="error"></div>
+        <input type="submit" id="submit" value="Отправить" />
+        <br />
+      </form>
+    </fieldset>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function ($) {
+        $(".check_password").on("keyup", function () {
+          var input1 = $(".password").val();
+          var input2 = $(".check_password").val();
+
+          if (input1 != "" && input2 === "") {
+            $(".check_password").css("backgroundColor", "white");
+            $(".password").css("backgroundColor", "white");
+          } else if (input1 != input2) {
+            $(".error").html("Пароли не совпадают!");
+            $("#submit").attr("disabled", "disabled");
+            $(".check_password").css("backgroundColor", "red");
+            $(".password").css("backgroundColor", "red");
+          } else {
+            $("#submit").removeAttr("disabled");
+            $(".error").html("");
+            $(".check_password").css("backgroundColor", "white");
+            $(".password").css("backgroundColor", "white");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
