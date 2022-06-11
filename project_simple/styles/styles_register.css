@@ -79,6 +79,11 @@ input:focus {
   background-color: white;
 }
 
+.login_btn[disabled] {
+  background-color: darkgray;
+  color: dimgray;
+}
+
 .links {
   color: white;
 }

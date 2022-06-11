@@ -20,22 +20,39 @@
         <div class="card-body">
           <form>
             <div class="input-form">
-              <input type="text" class="name" placeholder="name" />
+              <input type="text" 
+              required class="name" 
+              placeholder="name" />
             </div>
             <div class="input-form">
-              <input type="text" class="surname" placeholder="surname" />
+              <input
+                type="text"
+                required
+                class="surname"
+                placeholder="surname"
+              />
             </div>
             <div class="input-form">
-              <input type="text" class="email" placeholder="email" />
+              <input
+                type="text"
+                required
+                class="email"
+                placeholder="email"
+                pattern="[a-zA-Z]{1}[a-zA-Z\d\u002E\u005F]+@([a-zA-Z]+\u002E){1,2}[a-zA-Z]+"
+              />
             </div>
             <div class="input-form">
-              <span class="input-group-text"><i class="fas fa-key"></i> </span>
-              <input type="password" class="password" placeholder="password" />
-            </div>
-            <div class="input-form">
-              <span class="input-group-text"><i class="fas fa-key"></i> </span>
               <input
                 type="password"
+                required
+                class="password"
+                placeholder="password"
+              />
+            </div>
+            <div class="input-form">
+              <input
+                type="password"
+                required
                 class="check_password"
                 placeholder="repeat password"
               />
@@ -43,12 +60,9 @@
             <div class="error"></div>
             <div class="remember"><input type="checkbox" />Remember Me</div>
             <div class="form-group">
-              <input
-                type="submit"
-                value="Sign up"
-                id="submit"
-                class="login_btn"
-              />
+              <button type="submit" id="submit" class="login_btn">
+                Sign up
+              </button>
             </div>
           </form>
         </div>
@@ -64,9 +78,6 @@
         $(".check_password").on("keyup", function () {
           var input1 = $(".password").val();
           var input2 = $(".check_password").val();
-          var name = $(".name").val();
-          var surname = $(".surname").val();
-          var email = $(".email").val();
 
           if (input1 != "" && input2 === "") {
             $(".check_password").css("backgroundColor", "white");
@@ -74,14 +85,8 @@
           } else if (input1 != input2) {
             $(".error").html("Passwords do not match. Please try again.");
             $("#submit").attr("disabled", "disabled");
-            $(".check_password").css("backgroundColor", "red");
-            $(".password").css("backgroundColor", "red");
-          } else if (
-            name.length != 0 &&
-            email.length != 0 &&
-            surname.length != 0
-          ) {
-            $("#submit").removeAttr("disabled");
+            $(".check_password").css("backgroundColor", "lightpink");
+            $(".password").css("backgroundColor", "lightpink");
           } else {
             $("#submit").removeAttr("disabled");
             $(".error").html("");
@@ -90,6 +95,19 @@
           }
         });
       });
+
+      var button = document.querySelector("button");
+      var input = document.querySelector("input");
+
+      button.addEventListener(
+        "click",
+        function () {
+          if (input.value === "") {
+            $(".error").html("All fields are mandatory.");
+          }
+        },
+        false
+      );
     </script>
   </body>
 </html>
